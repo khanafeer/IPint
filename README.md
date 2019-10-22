@@ -15,4 +15,4 @@ scan IP or Domain against:
 12-ping
 
 usage:
-python main -i [IP] -a
+python main.py -i [IP] -a
