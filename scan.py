@@ -191,8 +191,24 @@ class Scan:
                     out_file.write(unicode(key)+'\n')
                     out_file.write(unicode(value)+'\n')
                 out_file.close()
-                printl('Malwares Count : {}'.format(out['malware']['count']),c.G)
-                printl('URL list Size  : {}'.format(out['url_list']['actual_size']),c.G)
+                try:
+                    printl('Pulses Count : {}'.format(out['general']['pulse_info']['count']), c.G)
+                except:
+                    printl('Pulses Count : 0', c.G)
+
+                try:
+                    printl('Malwares Count : {}'.format(out['malware']['count']),c.G)
+                except:
+                    printl('Malwares Count : 0', c.G)
+                try:
+                    printl('passive_dns Size  : {}'.format(len(out['passive_dns']['passive_dns'])),c.G)
+                except:
+                    printl('passive_dns Size  : 0', c.G)
+                try:
+                    printl('URL list Size  : {}'.format(out['url_list']['actual_size']),c.G)
+                except:
+                    printl('URL list Size  : 0', c.G)
+
                 printl('OTX results stored on file {}'.format(ofile),c.G)
             except Exception as ex:
                 printl('Error with otx_scan function : {}'.format(ex),c.R)

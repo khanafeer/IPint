@@ -134,7 +134,7 @@ ApiVoid: ''')
                 'TwitterAccessToken': None,
                 'TwitterAccessTokenSecret': None,
             }
-            self.arg.twitter = self.arg.passivetotal = self.arg.weboftrust = self.arg.virustotal = self.arg.metascan = self.arg.apivoid = False
+            self.arg.twitter = self.arg.passivetotal = self.arg.weboftrust = self.arg.virustotal = self.arg.otx = self.arg.metascan = self.arg.apivoid = False
             f.close()
         return settings
 
@@ -264,6 +264,8 @@ ApiVoid: ''')
             self.arg.spamlists = True
             self.arg.twitter = True
             self.arg.metascan = True
+            self.arg.otx = True
+            self.arg.apivoid = True
 
         if self.arg.probes is True or self.arg.all is True:
             self.arg.cert = True

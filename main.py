@@ -1,4 +1,3 @@
-
 from entry import Setup,domain_check
 import dns
 import socket
