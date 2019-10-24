@@ -13,3 +13,6 @@ scan IP or Domain against:
 10-openssl
 11-whois
 12-ping
+
+usage:
+python main.py -i [IP] -a
